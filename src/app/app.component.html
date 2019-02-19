@@ -1,17 +1,9 @@
-<h1>Welcome to angular Material</h1>
-<h2>Version 2</h2>
-
-<div>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-</div>
-
-<div>
-  <mat-checkbox>Check me!</mat-checkbox>
-</div>
-
-<div>
-  <mat-icon>home</mat-icon>
-  <mat-icon color="primary">pets</mat-icon>
-  <mat-icon color="warn">mic</mat-icon>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #mySidenav mode="over">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h1>This is the main page under the sidenav</h1>
+    <button (click)="mySidenav.toggle()">Click here to open sidenav</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
