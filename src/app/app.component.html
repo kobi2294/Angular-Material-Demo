@@ -4,6 +4,10 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <h1>This is the main page under the sidenav</h1>
-    <button (click)="mySidenav.toggle()">Click here to open sidenav</button>
+    <button mat-raised-button color="accent" (click)="mySidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+      <span>Open Sidenav</span>
+    </button>
+    <h2>The latest action is: {{latestAction | async }}</h2>
   </mat-sidenav-content>
 </mat-sidenav-container>

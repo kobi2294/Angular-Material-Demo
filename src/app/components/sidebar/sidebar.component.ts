@@ -1,3 +1,4 @@
+import { ActionsService } from './../../services/actions.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private actions: ActionsService) { }
 
   ngOnInit() {
   }
 
+  async onAction(name: string) {
+    await this.actions.onAction(name);
+  }
 }
