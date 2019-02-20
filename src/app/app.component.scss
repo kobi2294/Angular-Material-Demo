@@ -3,6 +3,36 @@ mat-sidenav-container {
     height: 100%;
 }
 
+.links-area {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.links-area a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 8px;
+}
+
+.links-area a:hover, 
+.links-area a:active {
+    color: lightgray;
+}
+
+
+.logo-area{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    font-style: italic;
+    text-decoration: underline lightsalmon;
+    margin-left: 24px;
+    color: lightgreen;
+    transform: skew(-35deg) rotate(-5deg);
+    text-shadow: 2px 2px 2px black;
+}
+
 mat-icon {
     margin-right: 8px;
 }

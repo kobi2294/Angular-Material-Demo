@@ -3,11 +3,22 @@
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div class="menu-button-area">
+          <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+          </button>
+      </div>
+      <div class="logo-area">
+        Samply
+      </div>
+      <div class="links-area">
+        <a href="http://www.google.com">Google</a>
+        <a href="http://www.yahoo.com">Yahoo</a>
+        <a href="http://www.cnn.com">CNN</a>
+      </div>
+    </mat-toolbar>
     <h1>This is the main page under the sidenav</h1>
-    <button mat-raised-button color="accent" (click)="mySidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-      <span>Open Sidenav</span>
-    </button>
     <h2>The latest action is: {{latestAction | async }}</h2>
   </mat-sidenav-content>
 </mat-sidenav-container>

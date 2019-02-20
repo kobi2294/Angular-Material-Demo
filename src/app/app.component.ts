@@ -21,6 +21,11 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.latestAction = this.actions.getActions();
   }
 
+  async onToggleSidenav() {
+    let sidenav = await this.layout.getSidenav();
+    sidenav.toggle();
+  }
+
   async ngAfterViewInit() {
     console.log('ng after view init of app component');
     console.log(this.sidenav);
