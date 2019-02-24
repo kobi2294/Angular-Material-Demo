@@ -1,4 +1,4 @@
-import { ActionsService } from './../../services/actions.service';
+import { ActionsService } from './../../../services/actions.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

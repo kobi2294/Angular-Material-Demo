@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { SidebarButtonComponent } from './components/sidebar-button/sidebar-button.component';
+import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
+import { SidebarButtonComponent } from './components/navigation/sidebar-button/sidebar-button.component';
 
 
 @NgModule({
