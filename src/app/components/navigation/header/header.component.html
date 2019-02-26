@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <div class="menu-button-area">
+        <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div class="logo-area">
+      Samply
+    </div>
+    <div class="title-area">
+      {{ title | async }}
+    </div>
+
+    <div class="links-area">
+      <a routerLinkActive="selected" [routerLink]="['home']">Home</a>
+      <a routerLinkActive="selected" [routerLink]="['items']">Items</a>
+      <a routerLinkActive="selected" [routerLink]="['about']">About</a>
+    </div>
+  </mat-toolbar>

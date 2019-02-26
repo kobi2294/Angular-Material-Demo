@@ -3,6 +3,7 @@ import { LayoutService } from './services/layout.service';
 import { MatSidenav } from '@angular/material';
 import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { PageInfoService } from './services/page-info.service';
 
 @Component({
   selector: 'app-root',
@@ -15,15 +16,13 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   latestAction: Observable<string>;
 
-  constructor(private layout: LayoutService, private actions: ActionsService){}
+  constructor(
+    private layout: LayoutService, 
+    private actions: ActionsService, 
+    ){}
 
   ngOnInit(): void {
     this.latestAction = this.actions.getActions();
-  }
-
-  async onToggleSidenav() {
-    let sidenav = await this.layout.getSidenav();
-    sidenav.toggle();
   }
 
   async ngAfterViewInit() {
